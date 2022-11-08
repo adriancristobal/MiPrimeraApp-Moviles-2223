@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvName"
+        app:layout_constraintBottom_toTopOf="@id/tvPhone"
+        app:layout_constraintEnd_toStartOf="@id/etName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/etName"
+
+        app:layout_constraintBottom_toTopOf="@id/etPhone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.14"
+        app:layout_constraintStart_toEndOf="@id/tvName"
+        app:layout_constraintTop_toTopOf="parent"
+        app:startIconDrawable="@drawable/person"
+        app:startIconTint="@color/secondaryColor"
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:maxLines="1"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/tvPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvPhone"
+        app:layout_constraintBottom_toTopOf="@id/tvEmail"
+        app:layout_constraintEnd_toStartOf="@id/etPhone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etPhone"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/etPhone"
+        app:counterEnabled="true"
+        app:counterMaxLength="9"
+        app:layout_constraintBottom_toTopOf="@id/etEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvPhone"
+        app:layout_constraintTop_toBottomOf="@id/etName"
+        app:startIconDrawable="@drawable/call"
+        app:startIconTint="@color/secondaryColor">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="250dp"
+            android:layout_height="50dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvEmail"
+        app:layout_constraintBottom_toTopOf="@id/tvGender"
+        app:layout_constraintEnd_toStartOf="@id/etEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPhone" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/etEmail"
+        android:layout_marginTop="0dp"
+        app:layout_constraintBottom_toTopOf="@id/rgGender"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvEmail"
+        app:layout_constraintTop_toBottomOf="@id/etPhone"
+        app:startIconDrawable="@drawable/alternate_email"
+        app:startIconTint="@color/secondaryColor"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/tvGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvGender"
+        app:layout_constraintBottom_toTopOf="@id/tvPassword"
+        app:layout_constraintEnd_toStartOf="@id/rgGender"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvEmail" />
+
+    <RadioGroup
+        android:id="@+id/rgGender"
+        android:layout_width="226dp"
+        android:layout_height="38dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/etPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvGender"
+        app:layout_constraintTop_toBottomOf="@id/etEmail">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rbMale"
+            android:buttonTint="@color/secondaryColor"
+            />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rbFemale"
+            android:buttonTint="@color/secondaryColor"
+            />
+
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/tvPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvPassword"
+        app:layout_constraintBottom_toTopOf="@id/btnAdd"
+        app:layout_constraintEnd_toStartOf="@id/etPassword"
+        app:layout_constraintHorizontal_bias="0.85"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvGender" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etPassword"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/secondaryColor"
+        app:layout_constraintBottom_toTopOf="@+id/btnAdd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.14"
+        app:layout_constraintStart_toEndOf="@id/tvPassword"
+        app:layout_constraintTop_toBottomOf="@id/rgGender">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="250dp"
+            android:layout_height="55dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnAdd"
+        app:icon="@drawable/person_add"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        app:layout_constraintBottom_toTopOf="@id/btnPrevious"
+        app:layout_constraintEnd_toStartOf="@+id/btnClean"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etPassword" />
+
+    <Button
+        android:id="@+id/btnClean"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnClean"
+        app:icon="@drawable/mop"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        app:layout_constraintBottom_toTopOf="@id/btnNext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnAdd"
+        app:layout_constraintTop_toBottomOf="@id/etPassword"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnPrevious"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnPrevious"
+        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnChangeView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAdd"
+         />
+
+    <Button
+        android:id="@+id/btnNext"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnNext"
+        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnChangeView"
+        app:layout_constraintTop_toBottomOf="@+id/btnClean"
+        />
+
+    <Button
+        android:id="@+id/btnChangeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnChangeView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAdd"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

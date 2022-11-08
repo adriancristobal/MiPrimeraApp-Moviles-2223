@@ -1,0 +1,30 @@
+<resources>
+    <string name="personLArrayList">personArrayList</string>
+
+    <string name="app_name">MiPrimeraApp-Moviles-2223</string>
+    <string name="tvName">Name: </string>
+    <string name="tvAge">Age: </string>
+    <string name="tvPhone">Phone: </string>
+    <string name="tvEmail">Email: </string>
+    <string name="tvGender">Gender: </string>
+    <string name="tvPassword">Password: </string>
+
+    <string name="etName">Insert name</string>
+    <string name="etAge">Insert age (numbers)</string>
+    <string name="etPhone">Insert phone (numbers)</string>
+    <string name="etEmail">android1234@hotmail.com</string>
+
+    <string name="rbMale">Man</string>
+    <string name="rbFemale">Woman</string>
+    <string name="btnAdd">ADD</string>
+    <string name="btnClean">CLEAN</string>
+    <string name="btnPrevious">PREV</string>
+    <string name="btnNext">NEXT</string>
+    <string name="btnChangeView">GO</string>
+
+    <string name="errorValidatePerson">ERROR. Person not validated</string>
+    <string name="errorPersonAdded">ERROR.Person not added</string>
+    <string name="errorPersonDelete">ERROR.Person not deleted</string>
+    <string name="todo">TODO</string>
+
+</resources>

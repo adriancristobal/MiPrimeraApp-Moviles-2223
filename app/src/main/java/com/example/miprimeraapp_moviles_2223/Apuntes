@@ -1,0 +1,32 @@
+Validar en el UseCase
+Implementar Update y Delete
+
+hacer foreach en kotlin:
+    var index = personas.indices.find {personas[it].email == email] ?: Constantes.NOT_FOUND
+    -----
+    for (i in personas.indices) {
+        if(personas[i].email == email){
+            index = i
+        }
+    }
+
+    -----------------
+
+    val indice1 = personas.indices.first  { personas[it].email == email }
+
+        val indice1 = personas.indices.firstOrNull  { personas[it].email == email } ?: Constantes.NOT_FOUND
+
+
+    -------------
+    personas.filterIndexed
+    -------------
+    personas.mapIndexedd
+
+    --------
+    El indice lo ponemos en el viewmodel y todas las funciones (nextPerosn, PreviousPerson, cleanFields, etc)
+
+   --------------------
+
+   Poner maxline a todos los edittext
+   Tmabien inputType a cada uno
+

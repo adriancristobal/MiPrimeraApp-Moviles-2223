@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    android:elevation="20dp"
+    app:cardBackgroundColor="@color/white"
+    android:backgroundTint="@color/primaryColor">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+
+        <TextView
+            android:id="@+id/tvNamePersonItem"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/tvName"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tvPhonePersonItem"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvPhonePersonItem"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/tvPhone"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvNamePersonItem"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ivPersonDelete"/>
+
+        <ImageView
+            android:id="@+id/ivPersonDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_delete_black_24dp"
+            android:layout_marginStart="100dp"
+            android:background="@drawable/fondo"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvPhonePersonItem"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/red"
+            android:contentDescription="@string/todo" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

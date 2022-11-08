@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/tvName"
+        app:layout_constraintBottom_toTopOf="@id/tvPhone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/etName"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/etName"
+        app:layout_constraintBottom_toTopOf="@id/etPhone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvName"
+        app:startIconDrawable="@drawable/person"
+        app:startIconTint="@color/secondaryColor"
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="250dp"
+            android:layout_height="50dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/tvPhone"
+        app:layout_constraintBottom_toTopOf="@id/tvEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvName"
+        app:layout_constraintEnd_toStartOf="@id/etPhone"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/etPhone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvPhone"
+        app:layout_constraintTop_toBottomOf="@id/etName"
+        app:layout_constraintBottom_toTopOf="@id/etEmail"
+        app:startIconDrawable="@drawable/call"
+        app:startIconTint="@color/secondaryColor"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="250dp"
+            android:layout_height="50dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/tvEmail"
+        app:layout_constraintBottom_toTopOf="@id/tvGender"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPhone"
+        app:layout_constraintEnd_toStartOf="@id/etEmail"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/etEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvEmail"
+        app:layout_constraintTop_toBottomOf="@id/etPhone"
+        app:layout_constraintBottom_toTopOf="@id/rgGender"
+        app:startIconDrawable="@drawable/alternate_email"
+        app:startIconTint="@color/secondaryColor"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="@string/tvGender"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvEmail"
+        app:layout_constraintEnd_toStartOf="@id/rgGender"/>
+
+    <RadioGroup
+        android:id="@+id/rgGender"
+        android:layout_width="251dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/etPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvGender"
+        app:layout_constraintTop_toBottomOf="@id/etEmail">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="73dp"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/secondaryColor"
+            android:text="@string/rbMale" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/secondaryColor"
+            android:text="@string/rbFemale" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/tvPassword"
+        app:layout_constraintBottom_toTopOf="@+id/btnPrevious"
+        app:layout_constraintEnd_toStartOf="@id/etPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvGender"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etPassword"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/secondaryColor"
+        app:layout_constraintBottom_toTopOf="@id/btnClean"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvPassword"
+        app:layout_constraintTop_toBottomOf="@id/rgGender">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="250dp"
+            android:layout_height="50dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnPrevious"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnPrevious"
+        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPassword"
+        app:layout_constraintEnd_toStartOf="@id/btnAdd"
+        />
+
+    <Button
+        android:id="@+id/btnAdd"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnAdd"
+        app:icon="@drawable/person_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnPrevious"
+        app:layout_constraintTop_toBottomOf="@+id/etPassword"
+        app:layout_constraintEnd_toStartOf="@id/btnClean"
+        />
+
+    <Button
+        android:id="@+id/btnClean"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnClean"
+        app:icon="@drawable/mop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnAdd"
+        app:layout_constraintTop_toBottomOf="@+id/etPassword"
+        app:layout_constraintEnd_toStartOf="@id/btnNext"
+        />
+
+    <Button
+        android:id="@+id/btnNext"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnNext"
+        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnClean"
+        app:layout_constraintTop_toBottomOf="@+id/etPassword"
+        />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
